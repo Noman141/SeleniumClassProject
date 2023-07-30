@@ -15,13 +15,13 @@ public class IdWithClassLocator {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.quit();
         //ClassName locator
         driver.findElement(By.className("input_error")).sendKeys("standard_user");
         driver.findElement(By.className("input_error")).sendKeys("secret_sauce");
+        driver.findElement(By.className("submit-button")).click();
         Thread.sleep(3000);
-        System.out.println(driver.getTitle());
         driver.quit();
 
     }
